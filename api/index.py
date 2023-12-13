@@ -19,3 +19,7 @@ def hello_world():
 @app.get("/api/list")
 def liste():
     return {"liste": ["Apfel", "Banane", "Birne", "Ananas", "Mango", "Orange"]}
+
+@app.get("/api/add")
+async def read_item(a: int = 0, b: int = 0):
+    return {"sum": a+b}
