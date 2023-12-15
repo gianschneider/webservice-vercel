@@ -27,6 +27,10 @@ def liste():
 async def read_item(a: int = 0, b: int = 0):
     return {"sum": a+b}
 
+@app.get("/api/add")
+async def read_item(a: int = 0, b: int = 0):
+    return {"sum": a+b}
+
 @app.get("/api/transformiere")
 async def transformiere(E: float =0, N: float =0):
     t2 = Transformer.from_crs(lv95, wgs84)
